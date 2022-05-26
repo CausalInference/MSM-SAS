@@ -11,7 +11,7 @@
      regression model.
 
      Reference (introductory level):
-     Hern·n MA, Brumback B, Robins JM. Marginal structural models to estimate 
+     Hern√°n MA, Brumback B, Robins JM. Marginal structural models to estimate 
      the causal effect of zidovudine on the survival of HIV-positive men. 
      Epidemiology 2000;11:561-570.
 
@@ -145,7 +145,7 @@
     bootend = ,
     bootlib =   work , /* libname for saving  bootstrap results */
     bootname = bootstrap , /* name of dataset for holding bootstrap results */
-    bseed= 12345,       /* random number seed for boostrap */
+    bseed= 12345,       /* random number seed for bootstrap */
 
 
     /* COMPUTATIONAL SPECIFICATIONS */
@@ -437,7 +437,7 @@
                %if &survival_curves = 1 %then %do;
 			   
 			            %let _resdata = _onegraph_;
-					    %if &boostrap = 1 %then %let _resdata = _bgraphsr ;
+					    %if &bootstrap = 1 %then %let _resdata = _bgraphsr ;
 
           			    %plot_graphs(datain =  &_resdata ,
                               time = &time ,    
